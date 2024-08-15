@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTaskFragment">
+
+
+    <EditText
+        android:id="@+id/editTextTaskDue"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:hint="@string/task_category_hint"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/editTextTaskDescription"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTaskDescription" />
+
+    <EditText
+        android:id="@+id/editTextTaskCategory"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:hint="@string/task_title_hint"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/editTextTaskDue"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTaskDue" />
+
+    <EditText
+        android:id="@+id/editTextTaskDescription"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/task_due_hint"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.336" />
+
+    <EditText
+        android:id="@+id/editTextTaskTitle"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:gravity="top|start"
+        android:hint="@string/task_description_hint"
+        android:inputType="textMultiLine"
+        android:maxLines="6"
+        android:minLines="1"
+        app:layout_constraintStart_toStartOf="@+id/editTextTaskCategory"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTaskCategory" />
+
+    <Button
+        android:id="@+id/buttonAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="116dp"
+        android:text="@string/add_task"
+        app:layout_constraintStart_toStartOf="@+id/editTextTaskTitle"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTaskTitle" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="94dp"
+        android:layout_height="102dp"
+        android:src="@mipmap/task"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.187" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
